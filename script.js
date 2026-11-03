@@ -36,7 +36,7 @@ const APP = {
         'Quality Inspector', 'Road Engineer', 'Building Constructor',
         'Estimation Expert'
     ],
-    preloaderMs: 3000,
+    preloaderMs: 800,
     waPopupMs: 6000,
     colors: {
         primary: '#2563eb', green: '#10b981', orange: '#f59e0b',
@@ -90,25 +90,17 @@ window.addEventListener('load', () => {
 // ==================== INIT ALL ====================
 document.addEventListener('DOMContentLoaded', () => {
     if (typeof AOS !== 'undefined') {
-        AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 80, disable: prefersReducedMotion() ? true : false });
+        AOS.init({ duration: 0, once: true, disable: true });
     }
 
-    // Core
-    initCursor();
     initTypewriter();
     initGreeting();
-    initCanvas();
     initWhatsApp();
     initPhoneReveal();
     initSettings();
     initSkillTabs();
     initContactForm();
     initToasts();
-
-    // Enhanced Features
-    initMagneticButtons();
-    initTiltCards();
-    initTextReveal();
     initImageLazyLoad();
     initSmoothScroll();
     initKeyboardNav();
@@ -117,29 +109,15 @@ document.addEventListener('DOMContentLoaded', () => {
     initCounterObserver();
     initSkillObserver();
     initGalleryLightbox();
-    initRippleEffect();
-    initEasterEgg();
     initVisitorCounter();
     initOnlineStatus();
     initClipboardCopy();
     initShareButtons();
     initPrintStyles();
-    initPerformanceMonitor();
-    initContextMenu();
-    initTypingIndicator();
-    initReadingTime();
-    initWeatherWidget();
-    initLocalTime();
     initScrollToTop();
-    initNavHideOnScroll();
-    initParallaxElements();
     initFormAutoSave();
-    initDarkModeSchedule();
-    initPageTransitions();
-    initSoundEffects();
     initAccessibility();
     initSEOEnhancements();
-    initAnalyticsReady();
     updateYear();
 
     console.log('%c🏗️ Er. Arun Panthi — Civil Engineer Portfolio', 'color:#2563eb;font-size:20px;font-weight:bold;padding:10px;');
@@ -672,8 +650,8 @@ function initContactForm() {
             showToast('⚠️ Please fill all required fields.', 'error');
             playSound('error');
             // Shake animation
-            form.style.animation = 'shake 0.5s';
-            setTimeout(() => form.style.animation = '', 500);
+            form.style.outline = '1px solid var(--red)';
+            setTimeout(() => form.style.outline = '', 800);
             return;
         }
 
