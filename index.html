@@ -56,7 +56,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous">
 
     <!-- ===== AOS ===== -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- ===== MAIN CSS ===== -->
     <link rel="stylesheet" href="styles.css">
@@ -113,8 +112,6 @@
     </div>
 
     <!-- ============================== CUSTOM CURSOR ============================== -->
-    <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
-    <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
 
     <!-- ============================== SIDE SOCIAL BAR (Left) ============================== -->
     <aside class="side-social" aria-label="Social media links">
@@ -269,7 +266,6 @@
 
         <!-- ==================== HERO ==================== -->
         <section class="hero" id="home" aria-label="Hero introduction">
-            <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
             <div class="hero-grid-bg" aria-hidden="true"></div>
             <div class="hero-gradient-orbs" aria-hidden="true">
                 <div class="orb orb-1"></div>
@@ -279,7 +275,7 @@
 
             <div class="hero-container container">
                 <!-- Hero Left Content -->
-                <div class="hero-content" data-aos="fade-right" data-aos-duration="1200">
+                <div class="hero-content">
                     <div class="hero-badge" data-hover>
                         <span class="badge-pulse" aria-hidden="true"></span>
                         <span>✅ Open for Opportunities</span>
@@ -329,7 +325,7 @@
 
                     <!-- CTA Buttons -->
                     <div class="hero-cta">
-                        <a href="#contact" class="btn btn-primary glow-btn" data-hover>
+                        <a href="#contact" class="btn btn-primary" data-hover>
                             <span>Get In Touch</span>
                             <i class="fas fa-arrow-right" aria-hidden="true"></i>
                         </a>
@@ -367,7 +363,7 @@
                 </div>
 
                 <!-- Hero Right Visual -->
-                <div class="hero-visual" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="300">
+                <div class="hero-visual">
                     <div class="hero-img-box">
                         <div class="hero-photo-frame">
                             <img src="images/profile.jpg" 
@@ -455,7 +451,7 @@
         <!-- ==================== ABOUT ==================== -->
         <section class="section about" id="about" aria-label="About Er. Arun Panthi">
             <div class="container">
-                <div class="section-head" data-aos="fade-up">
+                <div class="section-head">
                     <div class="section-badge">About Me</div>
                     <h2 class="section-title">Discover My <span class="gtext">Story</span></h2>
                     <p class="section-sub">Passionate engineer committed to building excellence</p>
@@ -463,7 +459,7 @@
 
                 <div class="about-grid">
                     <!-- Image Side -->
-                    <div class="about-img-side" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="about-img-side">
                         <div class="about-img-wrap">
                             <img src="images/about.jpg" 
                                  alt="Er. Arun Panthi working at a construction site in Nepal" 
@@ -485,7 +481,7 @@
                     </div>
 
                     <!-- Info Side -->
-                    <div class="about-info-side" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="about-info-side">
                         <!-- Mini Stats Cards -->
                         <div class="about-mini-cards">
                             <div class="mcard" data-hover>
@@ -595,14 +591,14 @@
         <!-- ==================== SERVICES (NEW SECTION) ==================== -->
         <section class="section services" id="services" aria-label="Engineering services">
             <div class="container">
-                <div class="section-head" data-aos="fade-up">
+                <div class="section-head">
                     <div class="section-badge">What I Do</div>
                     <h2 class="section-title">My <span class="gtext">Services</span></h2>
                     <p class="section-sub">Professional engineering services I offer</p>
                 </div>
 
                 <div class="services-grid">
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="100" data-hover>
+                    <div class="service-card" data-hover>
                         <div class="service-icon"><i class="fas fa-building"></i></div>
                         <div class="service-num">01</div>
                         <h3>Structural Design</h3>
@@ -614,7 +610,7 @@
                         </ul>
                     </div>
 
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="200" data-hover>
+                    <div class="service-card" data-hover>
                         <div class="service-icon orange"><i class="fas fa-helmet-safety"></i></div>
                         <div class="service-num">02</div>
                         <h3>Construction Supervision</h3>
@@ -626,7 +622,7 @@
                         </ul>
                     </div>
 
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="300" data-hover>
+                    <div class="service-card" data-hover>
                         <div class="service-icon green"><i class="fas fa-file-invoice-dollar"></i></div>
                         <div class="service-num">03</div>
                         <h3>Estimation & Costing</h3>
@@ -638,7 +634,7 @@
                         </ul>
                     </div>
 
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="400" data-hover>
+                    <div class="service-card" data-hover>
                         <div class="service-icon purple"><i class="fas fa-ruler-combined"></i></div>
                         <div class="service-num">04</div>
                         <h3>Surveying & Mapping</h3>
@@ -650,7 +646,7 @@
                         </ul>
                     </div>
 
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="500" data-hover>
+                    <div class="service-card" data-hover>
                         <div class="service-icon cyan"><i class="fas fa-drafting-compass"></i></div>
                         <div class="service-num">05</div>
                         <h3>AutoCAD Drafting</h3>
@@ -662,7 +658,7 @@
                         </ul>
                     </div>
 
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="600" data-hover>
+                    <div class="service-card" data-hover>
                         <div class="service-icon red"><i class="fas fa-road"></i></div>
                         <div class="service-num">06</div>
                         <h3>Road Engineering</h3>
@@ -680,7 +676,7 @@
         <!-- ==================== RESUME ==================== -->
         <section class="section resume" id="resume" aria-label="Education and experience">
             <div class="container">
-                <div class="section-head" data-aos="fade-up">
+                <div class="section-head">
                     <div class="section-badge">Resume</div>
                     <h2 class="section-title">Education & <span class="gtext">Experience</span></h2>
                     <p class="section-sub">My academic qualifications and professional journey</p>
@@ -688,7 +684,7 @@
 
                 <div class="resume-grid">
                     <!-- Education -->
-                    <div class="resume-col" data-aos="fade-right">
+                    <div class="resume-col">
                         <div class="rcol-head">
                             <div class="rcol-icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></div>
                             <h3>Education</h3>
@@ -744,7 +740,7 @@
                     </div>
 
                     <!-- Experience -->
-                    <div class="resume-col" data-aos="fade-left">
+                    <div class="resume-col">
                         <div class="rcol-head">
                             <div class="rcol-icon o"><i class="fas fa-briefcase" aria-hidden="true"></i></div>
                             <h3>Experience</h3>
@@ -812,19 +808,19 @@
         <!-- ==================== SKILLS ==================== -->
         <section class="section skills" id="skills" aria-label="Technical skills and expertise">
             <div class="container">
-                <div class="section-head" data-aos="fade-up">
+                <div class="section-head">
                     <div class="section-badge">Expertise</div>
                     <h2 class="section-title">My <span class="gtext">Skills</span></h2>
                     <p class="section-sub">Technical proficiency and professional capabilities</p>
                 </div>
 
-                <div class="skill-tabs" data-aos="fade-up" role="tablist">
+                <div class="skill-tabs" role="tablist">
                     <button class="stab active" data-tab="tech" role="tab" aria-selected="true" data-hover><i class="fas fa-hard-hat" aria-hidden="true"></i> Technical</button>
                     <button class="stab" data-tab="soft" role="tab" aria-selected="false" data-hover><i class="fas fa-laptop-code" aria-hidden="true"></i> Software</button>
                     <button class="stab" data-tab="pro" role="tab" aria-selected="false" data-hover><i class="fas fa-users" aria-hidden="true"></i> Professional</button>
                 </div>
 
-                <div class="skill-panel active" id="tab-tech" role="tabpanel" data-aos="fade-up">
+                <div class="skill-panel active" id="tab-tech" role="tabpanel">
                     <div class="skill-bars-grid">
                         <div class="sbar" data-hover><div class="sbar-top"><i class="fas fa-building" aria-hidden="true"></i><span>Structural Analysis & Design</span><span class="sbar-pct">85%</span></div><div class="sbar-track"><div class="sbar-fill" data-w="85"></div></div></div>
                         <div class="sbar" data-hover><div class="sbar-top"><i class="fas fa-helmet-safety" aria-hidden="true"></i><span>Construction Site Management</span><span class="sbar-pct">80%</span></div><div class="sbar-track"><div class="sbar-fill" data-w="80"></div></div></div>
@@ -868,14 +864,14 @@
         <!-- ==================== PROJECTS ==================== -->
         <section class="section projects" id="projects" aria-label="Featured projects">
             <div class="container">
-                <div class="section-head" data-aos="fade-up">
+                <div class="section-head">
                     <div class="section-badge">Portfolio</div>
                     <h2 class="section-title">Featured <span class="gtext">Projects</span></h2>
                     <p class="section-sub">Professional work and contributions</p>
                 </div>
 
                 <div class="proj-grid">
-                    <article class="proj-card" data-aos="fade-up" data-aos-delay="100" data-hover>
+                    <article class="proj-card" data-hover>
                         <div class="proj-img">
                             <div class="proj-bg blue"><i class="fas fa-hotel" aria-hidden="true"></i></div>
                             <span class="proj-num" aria-hidden="true">01</span>
@@ -890,7 +886,7 @@
                         </div>
                     </article>
 
-                    <article class="proj-card" data-aos="fade-up" data-aos-delay="200" data-hover>
+                    <article class="proj-card" data-hover>
                         <div class="proj-img">
                             <div class="proj-bg green"><i class="fas fa-road" aria-hidden="true"></i></div>
                             <span class="proj-num" aria-hidden="true">02</span>
@@ -905,7 +901,7 @@
                         </div>
                     </article>
 
-                    <article class="proj-card" data-aos="fade-up" data-aos-delay="300" data-hover>
+                    <article class="proj-card" data-hover>
                         <div class="proj-img">
                             <div class="proj-bg purple"><i class="fas fa-file-alt" aria-hidden="true"></i></div>
                             <span class="proj-num" aria-hidden="true">03</span>
@@ -926,13 +922,13 @@
         <!-- ==================== GALLERY ==================== -->
         <section class="section gallery" id="gallery" aria-label="Photo gallery">
             <div class="container">
-                <div class="section-head" data-aos="fade-up">
+                <div class="section-head">
                     <div class="section-badge">Gallery</div>
                     <h2 class="section-title">Photo <span class="gtext">Gallery</span></h2>
                     <p class="section-sub">Moments from my engineering journey</p>
                 </div>
 
-                <div class="gallery-grid" data-aos="fade-up">
+                <div class="gallery-grid">
                     <div class="gal-item" data-hover tabindex="0" role="button" aria-label="Construction site photo">
                         <div class="gal-placeholder"><i class="fas fa-hard-hat" aria-hidden="true"></i><span>Construction Site</span></div>
                     </div>
@@ -963,22 +959,22 @@
             <div class="counter-bg" aria-hidden="true"></div>
             <div class="container">
                 <div class="counter-grid">
-                    <div class="cnt" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="cnt">
                         <div class="cnt-icon" aria-hidden="true"><i class="fas fa-project-diagram"></i></div>
                         <div class="cnt-num" data-target="2" aria-label="2 projects completed">0</div>
                         <div class="cnt-label">Projects Completed</div>
                     </div>
-                    <div class="cnt" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="cnt">
                         <div class="cnt-icon" aria-hidden="true"><i class="fas fa-calendar-check"></i></div>
                         <div class="cnt-num" data-target="4" aria-label="4 months internship">0</div>
                         <div class="cnt-label">Months Internship</div>
                     </div>
-                    <div class="cnt" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="cnt">
                         <div class="cnt-icon" aria-hidden="true"><i class="fas fa-graduation-cap"></i></div>
                         <div class="cnt-num" data-target="1" aria-label="1 engineering degree">0</div>
                         <div class="cnt-label">Engineering Degree</div>
                     </div>
-                    <div class="cnt" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="cnt">
                         <div class="cnt-icon" aria-hidden="true"><i class="fas fa-mug-hot"></i></div>
                         <div class="cnt-num" data-target="999" aria-label="999 cups of tea">0</div>
                         <div class="cnt-label">Cups of Tea ☕</div>
@@ -990,7 +986,7 @@
         <!-- ==================== PHILOSOPHY / QUOTE ==================== -->
         <section class="section quote-sec" aria-label="Personal philosophy">
             <div class="container">
-                <div class="quote-card" data-aos="fade-up" data-hover>
+                <div class="quote-card" data-hover>
                     <i class="fas fa-quote-left quote-icon" aria-hidden="true"></i>
                     <blockquote cite="Er. Arun Panthi">
                         "Engineering is not merely about erecting structures — it's about building 
@@ -1011,7 +1007,7 @@
         <!-- ==================== CONTACT ==================== -->
         <section class="section contact" id="contact" aria-label="Contact information and form">
             <div class="container">
-                <div class="section-head" data-aos="fade-up">
+                <div class="section-head">
                     <div class="section-badge">Contact</div>
                     <h2 class="section-title">Let's <span class="gtext">Connect</span></h2>
                     <p class="section-sub">Have a project in mind? Let's build something great together!</p>
@@ -1019,7 +1015,7 @@
 
                 <div class="contact-grid">
                     <!-- Contact Info -->
-                    <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-info">
                         <h3>Get In Touch <span class="gtext">With Me</span></h3>
                         <p>Whether you need engineering consultation, have a construction project, 
                            or want to discuss opportunities — I'm just a message away!</p>
@@ -1078,7 +1074,7 @@
                     </div>
 
                     <!-- Contact Form -->
-                    <div class="contact-form-side" data-aos="fade-left">
+                    <div class="contact-form-side">
                         <div class="form-card">
                             <h3><i class="fas fa-paper-plane" aria-hidden="true"></i> Send a Message</h3>
                             <p>Fill out the form and I'll respond within 24 hours.</p>
@@ -1259,7 +1255,6 @@
     <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
 
     <!-- ============================== SCRIPTS ============================== -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
