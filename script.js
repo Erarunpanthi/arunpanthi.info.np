@@ -665,6 +665,7 @@ function initContactForm() {
         const payload = {
             name: n,
             email: em,
+            _replyto: em,
             phone: phone || 'Not provided',
             subject: s,
             message: m,
@@ -704,10 +705,7 @@ function initContactForm() {
         } catch (err) {
             btn.classList.remove('loading');
             btn.disabled = false;
-            showToast('Could not send. Opening your email app instead.', 'error');
-            const subject = encodeURIComponent(s);
-            const body = encodeURIComponent(`Name: ${n}\nEmail: ${em}\nPhone: ${phone}\n\nMessage:\n${m}\n\n---\nSent from arunpanthi.info.np`);
-            window.location.href = `mailto:${APP.email}?subject=${subject}&body=${body}`;
+            showToast('Message could not be sent. Please try again in a moment.', 'error');
         }
     });
 }
