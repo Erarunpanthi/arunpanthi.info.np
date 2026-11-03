@@ -638,52 +638,77 @@ function initContactForm() {
     const btn = $('#formBtn');
     if (!form || !btn) return;
 
-    on(form, 'submit', e => {
+    on(form, 'submit', async e => {
         e.preventDefault();
 
         const n = $('#fn').value.trim();
         const em = $('#fe').value.trim();
+        const phone = ($('#fp') && $('#fp').value.trim()) || '';
         const s = $('#fs').value.trim();
         const m = $('#fm').value.trim();
 
         if (!n || !em || !s || !m) {
-            showToast('⚠️ Please fill all required fields.', 'error');
-            playSound('error');
-            // Shake animation
+            showToast('Please fill all required fields.', 'error');
             form.style.outline = '1px solid var(--red)';
             setTimeout(() => form.style.outline = '', 800);
             return;
         }
 
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)) {
-            showToast('⚠️ Please enter a valid email address.', 'error');
+            showToast('Please enter a valid email address.', 'error');
             return;
         }
 
         btn.classList.add('loading');
         btn.disabled = true;
 
-        const subject = encodeURIComponent(s);
-        const body = encodeURIComponent(`Name: ${n}\nEmail: ${em}\n\nMessage:\n${m}\n\n---\nSent from portfolio website`);
+        const payload = {
+            name: n,
+            email: em,
+            phone: phone || 'Not provided',
+            subject: s,
+            message: m,
+            _subject: `Portfolio contact: ${s}`,
+            _template: 'table',
+            _captcha: 'false',
+            _honey: ($('#fhoney') && $('#fhoney').value) || ''
+        };
 
-        setTimeout(() => {
+        try {
+            const res = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(APP.email)}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            });
+
+            const data = await res.json().catch(() => ({}));
+
+            if (!res.ok || data.success === 'false' || data.success === false) {
+                throw new Error(data.message || 'Send failed');
+            }
+
             btn.classList.remove('loading');
             btn.classList.add('success');
-            showToast('✅ Message prepared! Email client opening...', 'success');
-            playSound('success');
-
-            // Save form data
+            showToast('Message sent. I will reply to your email soon.', 'success');
             localStorage.setItem('lastMessage', JSON.stringify({ name: n, email: em, subject: s, date: new Date().toISOString() }));
-
-            window.location.href = `mailto:${APP.email}?subject=${subject}&body=${body}`;
+            form.reset();
+            if (typeof clearFormAutoSave === 'function') clearFormAutoSave();
 
             setTimeout(() => {
                 btn.classList.remove('success');
                 btn.disabled = false;
-                form.reset();
-                clearFormAutoSave();
             }, 4000);
-        }, 1800);
+        } catch (err) {
+            btn.classList.remove('loading');
+            btn.disabled = false;
+            showToast('Could not send. Opening your email app instead.', 'error');
+            const subject = encodeURIComponent(s);
+            const body = encodeURIComponent(`Name: ${n}\nEmail: ${em}\nPhone: ${phone}\n\nMessage:\n${m}\n\n---\nSent from arunpanthi.info.np`);
+            window.location.href = `mailto:${APP.email}?subject=${subject}&body=${body}`;
+        }
     });
 }
 
