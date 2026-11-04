@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sanitary Engineering by S.K. Neupane — PDF preview for civil engineering study in Nepal.">
+    <title>Sanitary Engineering — S.K. Neupane | Civil Engineering Books</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <header class="header scrolled">
+        <nav class="nav container">
+            <a href="../../index.html" class="nav-logo">
+                <div class="logo-icon"><span>AP</span></div>
+                <div class="logo-text">
+                    <span class="logo-name">Arun Panthi</span>
+                    <span class="logo-role">Civil Engineer</span>
+                </div>
+            </a>
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="../../index.html" class="nav-link"><span>Home</span></a></li>
+                    <li><a href="index.html" class="nav-link active"><span>Books</span></a></li>
+                    <li><a href="../../index.html#contact" class="nav-link"><span>Contact</span></a></li>
+                </ul>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+        </nav>
+    </header>
+
+    <main class="books-page">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-badge">Book 25</span>
+                <h1 class="section-title">Sanitary <span class="gtext">Engineering</span></h1>
+            </div>
+            <p class="book-meta">S.K. Neupane — Sanitary Engineering resource PDF (139 pages). Preview is hosted on Scribd. If the preview does not load, allow third-party content or open the document on Scribd.</p>
+            <p><a class="book-link" href="index.html">← All books</a></p>
+
+            <div class="book-preview">
+                <iframe
+                    title="Sanitary Engineering by S.K. Neupane"
+                    src="https://www.scribd.com/embeds/636416506/content?start_page=1&view_mode=scroll&show_recommendations=false"
+                    allowfullscreen
+                    loading="lazy"></iframe>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; <span id="yr">2026</span> Er. Arun Panthi. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('yr').textContent = new Date().getFullYear();
+        const t = document.getElementById('navToggle'), m = document.getElementById('navMenu');
+        if (t && m) t.addEventListener('click', () => m.classList.toggle('open'));
+    </script>
+</body>
+</html>
